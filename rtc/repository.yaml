@@ -3,7 +3,6 @@ Navi_relay :
   type : git
   url : 'https://github.com/KatoMisa/Navi_relay'
   platform : 'win, ubuntu'
-  
 Navi_cui :
   description : 'Cui for navigation place'
   type : git
