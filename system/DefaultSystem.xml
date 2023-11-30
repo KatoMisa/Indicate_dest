@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<rts:RtsProfile xmlns:rts="http://www.openrtp.org/namespaces/rts" xmlns:rtsExt="http://www.openrtp.org/namespaces/rts_ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" rts:id="RTSystem:1:3:2" rts:abstract="4" rts:creationDate="2023-11-24T10:19:54" rts:updateDate="2023-11-24T10:19:54" rts:version="0.2">
+    <rts:Components xsi:type="rtsExt:component_ext" rts:id="RTC:VenderName:User Interface:Navi_cui:1.0.0" rts:pathUri="localhost:2809/Navi_cui0.rtc" rts:activeConfigurationSet="default" rts:instanceName="Navi_cui0" rts:compositeType="None" rts:isRequired="true" rtsExt:visible="true">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="cui_in" rtsExt:visible="true"/>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="cui_out" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:name="place1" rts:data="Home"/>
+            <rts:ConfigurationData rts:name="place2" rts:data="Reception desk"/>
+            <rts:ConfigurationData rts:name="place3" rts:data="Examination room"/>
+            <rts:ConfigurationData rts:name="place4" rts:data="Operation room"/>
+            <rts:ConfigurationData rts:name="place5" rts:data="Hospital room"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:name="place1" rts:data="text"/>
+            <rts:ConfigurationData rts:name="place2" rts:data="text"/>
+            <rts:ConfigurationData rts:name="place3" rts:data="text"/>
+            <rts:ConfigurationData rts:name="place4" rts:data="text"/>
+            <rts:ConfigurationData rts:name="place5" rts:data="text"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__type__">
+            <rts:ConfigurationData rts:name="place1" rts:data="string"/>
+            <rts:ConfigurationData rts:name="place2" rts:data="string"/>
+            <rts:ConfigurationData rts:name="place3" rts:data="string"/>
+            <rts:ConfigurationData rts:name="place4" rts:data="string"/>
+            <rts:ConfigurationData rts:name="place5" rts:data="string"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:x="0" rtsExt:y="0" rtsExt:height="0" rtsExt:width="0" rtsExt:direction="down"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000010000000000000082000000010102000e0000003139322e3136382e31312e353900fa0a0e000000fe19fa5f650000fdfd000000000000000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000300000016000000010000000b0000003137322e31372e302e310000fa0a"/>
+    </rts:Components>
+    <rts:Components xsi:type="rtsExt:component_ext" rts:id="RTC:VenderName:Category:Navi_relay:1.0.0" rts:pathUri="localhost:2809/Navi_relay0.rtc" rts:activeConfigurationSet="default" rts:instanceName="Navi_relay0" rts:compositeType="None" rts:isRequired="true" rtsExt:visible="true">
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="relay_in" rtsExt:visible="true"/>
+        <rts:DataPorts xsi:type="rtsExt:dataport_ext" rts:name="relay_out" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts xsi:type="rtsExt:execution_context_ext" rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:x="0" rtsExt:y="0" rtsExt:height="0" rtsExt:width="0" rtsExt:direction="down"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000010000000000000082000000010102000e0000003139322e3136382e31312e353900fa0a0e000000fe19fa5f650000fdfd000000000500000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000300000016000000010000000b0000003137322e31372e302e310000fa0a"/>
+    </rts:Components>
+    <rts:DataPortConnectors xsi:type="rtsExt:dataport_connector_ext" rts:connectorId="8df43995-3151-4edf-b4c8-68c65557181b" rts:name="relay_outcui_in" rts:dataType="IDL:RTC/TimedShort:1.0" rts:interfaceType="corba_cdr" rts:dataflowType="push" rts:subscriptionType="new">
+        <rts:sourceDataPort rts:componentId="RTC:VenderName:Category:Navi_relay:1.0.0" rts:instanceName="Navi_relay0" xsi:type="rtsExt:target_port_ext" rts:portName="Navi_relay0.relay_out">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost:2809/Navi_relay0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:VenderName:User Interface:Navi_cui:1.0.0" rts:instanceName="Navi_cui0" xsi:type="rtsExt:target_port_ext" rts:portName="Navi_cui0.cui_in">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost:2809/manager_cpp.mgr/Navi_cui0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedShort:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.outport"/>
+        <rtsExt:Properties rtsExt:name="dataport.inport"/>
+    </rts:DataPortConnectors>
+</rts:RtsProfile>
