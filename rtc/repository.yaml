@@ -1,12 +1,11 @@
 Navi_relay :
-  description : 'Relay for navigation place'
-  type : git
-  url : 'https://github.com/KatoMisa/Navi_relay'
-  platform : 'win, ubuntu'
+  description : Relay for navigation place
+  git : https://github.com/KatoMisa/Navi_relay
+  hash : a246eb0fae7ced031e14392e469bf697982d4644
+  repo_name : Navi_relay
 Navi_cui :
-  description : 'Cui for navigation place'
-  type : git
-  url : 'https://github.com/KatoMisa/Navi_cui'
-  platform : 'win, ubuntu'
-  
+  description : Cui for navigation place
+  git : https://github.com/KatoMisa/Navi_cui
+  hash : c6bb640335a15f4fe7de1a9c28143a601baaed3e
+  repo_name : Navi_cui
 
